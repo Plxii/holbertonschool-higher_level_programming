@@ -7,5 +7,5 @@ if __name__ == "__main__":
         print("{} argument: ".format(numarg))
     else:
         print("{} arguments.".format(numarg))
-    for i in range(numarg):
+    for i in range(numarg, len(sys.argv)):
         print("{}: {}".format({sys.argv}))
