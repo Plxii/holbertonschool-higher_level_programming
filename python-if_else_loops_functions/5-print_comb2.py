@@ -2,6 +2,6 @@
 
 for number in range(0, 100):
     if (number < 99):
-        print(f"{i:02d}", end=", ")
+        print(f"{number:02d}", end=", ")
     else:
         print(number)
