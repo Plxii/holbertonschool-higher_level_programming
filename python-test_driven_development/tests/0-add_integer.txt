@@ -1,0 +1,55 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(5,10)
+15
+>>> add_integer(-5,-5)
+-10
+>>> add_integer(-10,-100)
+-110
+>>> add_integer(5,-5)
+0
+>>> add_integer(-10,15)
+5
+>>> add_integer(50,100)
+150
+>>> add_integer(5.1,5.1)
+10
+>>> add_integer(10.50,10.11)
+20
+>>> add_integer(1)
+99
+
+>>> add_integer(s,-100)
+Traceback (most recent call last):
+...
+NameError: name 's' is not defined
+
+>>> add_integer(scotty,100)
+Traceback (most recent call last):
+...
+NameError: name 'scotty' is not defined
+
+>>> add_integer(naruto,ns)
+Traceback (most recent call last):
+...
+NameError: name 'naruto' is not defined
+
+>>> add_integer(float('inf'), 7)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('nan'), 8)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer("s", 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
