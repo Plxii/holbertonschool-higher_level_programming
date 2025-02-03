@@ -1,0 +1,19 @@
+Fichier : test_description.txt
+
+Description du projet :
+
+Ce projet contient une classe MyList qui hérite de la classe intégrée list. 
+La classe MyList ajoute une méthode print_sorted qui imprime les éléments de la liste dans l'ordre croissant.
+
+Fonctionnalités :
+- La classe MyList accepte une liste d'entiers.
+- La méthode print_sorted trie la liste et l'affiche sans modifier la liste d'origine.
+
+Tests :
+- Le fichier de test associé vérifie que la méthode print_sorted fonctionne correctement.
+- Les tests s'assurent que la sortie est bien triée et correspond aux attentes.
+
+Instructions d'utilisation :
+1. Importer la classe MyList depuis le fichier my_list.py.
+2. Créer une instance de MyList avec des entiers.
+3. Appeler la méthode print_sorted pour afficher la liste triée.
