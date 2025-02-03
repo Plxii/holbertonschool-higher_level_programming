@@ -1,0 +1,11 @@
+import unittest
+from my_list import MyList
+class TestMyList(unittest.TestCase):
+
+    def test_print_sorted(self):
+        my_list = MyList([3, 1, 2])
+        with unittest.mock.patch('builtins.print') as mocked_print:
+            my_list.print_sorted()
+            mocked_print.assert_called_once_with([1, 2, 3])
+if __name__ == '__main__':
+    unittest.main()
