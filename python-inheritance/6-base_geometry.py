@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+module 6-base_geometry contains the class BaseGeometry.
+"""
+
+
 class BaseGeometry:
     """A base class for geometry-related operations.
     """
