@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+module 7-base_geometry contains the class BaseGeometry.
+"""
+
+
 class BaseGeometry:
     """
     BaseGeometry is a class that serves as a base
