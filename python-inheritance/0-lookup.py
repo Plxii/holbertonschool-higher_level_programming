@@ -4,6 +4,7 @@
 module 0-lookup contains the function lookup.
 """
 
+
 def lookup(obj):
     """
     Returns a list of attributes and methods of the object.
