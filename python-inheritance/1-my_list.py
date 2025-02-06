@@ -15,4 +15,4 @@ class MyList(list):
         allowing access to its attributes and methods.
         """
         sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
