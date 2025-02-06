@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+module 1-my_list contains the class MyList.
+"""
+
+
 class MyList(list):
     """
     MyList is a subclass of the list class.
