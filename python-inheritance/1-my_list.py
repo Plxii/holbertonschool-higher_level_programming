@@ -14,5 +14,4 @@ class MyList(list):
         @self: The current instance of MyList
         allowing access to its attributes and methods.
         """
-        sorted_list = sorted(self)
         print(sorted(self))
