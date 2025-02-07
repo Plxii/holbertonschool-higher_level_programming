@@ -1,64 +1,79 @@
 #!/usr/bin/env python3
-import math
+
 from abc import ABC, abstractmethod
+from math import pi
 
 
 class Shape(ABC):
+    """
+    Abstract base class representing a geometric shape.
+    """
 
     @abstractmethod
     def area(self):
-        """Méthode abstraite pour calculer l'aire de la forme."""
+        """
+        Abstract method to calculate the area of the shape.
+        Must be implemented by subclasses.
+        """
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Méthode abstraite pour calculer le périmètre de la forme."""
+        """
+        Abstract method to calculate the perimeter of the shape.
+        Must be implemented by subclasses.
+        """
         pass
 
 
 class Circle(Shape):
+    """
+    Class representing a circle, inheriting from Shape.
+    """
 
     def __init__(self, radius):
-
-        """Initialisation avec le rayon du cercle."""
-        self.radius = radius
+        self.__radius = radius
 
     def area(self):
-        """Calcul de l'aire du cercle: π * rayon^2."""
-        return math.pi * self.radius ** 2
+        """
+        Calculates the area of the circle.
+        """
+        return pi * self.__radius ** 2
 
     def perimeter(self):
-        """Calcul du périmètre du cercle: 2 * π * rayon."""
-        return 2 * math.pi * self.radius
+        """
+        Calculates the perimeter (circumference) of the circle.
+        """
+        return 2 * pi * abs(self.__radius)
 
 
 class Rectangle(Shape):
+    """
+    Class representing a rectangle, inheriting from Shape.
+    """
 
     def __init__(self, width, height):
-
-        """Initialisation avec la largeur et la hauteur du rectangle."""
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     def area(self):
-        """Calcul de l'aire du rectangle: largeur * hauteur."""
-        return self.width * self.height
+        """
+        Calculates the area of the rectangle.
+        """
+        return self.__width * self.__height
 
     def perimeter(self):
-        """Calcul du périmètre du rectangle: 2 * (largeur + hauteur)."""
-        return 2 * (self.width + self.height)
+        """
+        Calculates the perimeter of the rectangle.
+        """
+        return 2 * (self.__width + self.__height)
 
 
 def shape_info(shape):
-
-    """Affiche l'aire et le périmètre de la forme passée en argument."""
-
-    print(f"Aire: {shape.area()}")
-    print(f"Périmètre: {shape.perimeter()}")
-
-
-circle = Circle(5)
-rectangle = Rectangle(4, 6)
-
-shape_info(circle)
-shape_info(rectangle)
+    """
+    Prints the area and perimeter of a shape
+    """
+    area = shape.area()
+    perimeter = shape.perimeter()
+    print("Area: {}".format(area))
+    print("Perimeter: {}".format(perimeter))
